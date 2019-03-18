@@ -17,4 +17,5 @@ public class UserAddress implements Serializable {
     private String addressNo;
     private String addressStr;
     private String userName;
+    private Long userId;
 }
