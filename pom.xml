@@ -4,8 +4,8 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <modules>
-        <module>user-service-consumer</module>
-        <module>order-service-provider</module>
+        <module>user-service-provider</module>
+        <module>order-service-consumer</module>
         <module>common-interface</module>
     </modules>
 

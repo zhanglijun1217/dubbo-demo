@@ -4,15 +4,13 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 
     <parent>
-        <artifactId>parent-demo</artifactId>
         <groupId>com.zhanglijun.demo</groupId>
+        <artifactId>parent-demo</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
 
-
-    <artifactId>user-service-consumer</artifactId>
+    <artifactId>order-service-consumer</artifactId>
 
     <dependencies>
         <!-- https://mvnrepository.com/artifact/com.alibaba/dubbo  这个dubbo版本是集成了spring的 -->
@@ -36,7 +34,6 @@
             <version>1.0-SNAPSHOT</version>
         </dependency>
 
-
     </dependencies>
-
+    
 </project>
