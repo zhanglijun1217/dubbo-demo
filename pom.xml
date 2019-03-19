@@ -7,6 +7,7 @@
         <module>user-service-provider</module>
         <module>order-service-consumer</module>
         <module>common-interface</module>
+        <module>boot-user-service-provider</module>
     </modules>
 
     <artifactId>parent-demo</artifactId>
