@@ -1,5 +1,9 @@
 package service.order;
 
+import javabean.UserAddress;
+
+import java.util.List;
+
 /**
  * 订单的接口  consumer对应的接口
  *  有一个初始化订单的方法 这个作为dubbo中的consumer 调用用户服务
@@ -8,5 +12,5 @@ package service.order;
  */
 public interface OrderService {
 
-    boolean initOrder();
+    List<UserAddress> initOrder();
 }

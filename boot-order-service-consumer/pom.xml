@@ -9,9 +9,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.zhanglijun.demo</groupId>
-    <artifactId>boot-user-service-provider</artifactId>
+    <artifactId>boot-order-service-consumer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>boot-user-service-provider</name>
+    <name>boot-order-service-consumer</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>

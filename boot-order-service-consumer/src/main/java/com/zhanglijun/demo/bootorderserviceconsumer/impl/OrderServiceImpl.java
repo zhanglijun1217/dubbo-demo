@@ -1,5 +1,6 @@
-package service.impl;
+package com.zhanglijun.demo.bootorderserviceconsumer.impl;
 
+import com.alibaba.dubbo.config.annotation.Reference;
 import javabean.UserAddress;
 import org.springframework.stereotype.Service;
 import service.order.OrderService;
@@ -16,7 +17,7 @@ import java.util.Optional;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Resource
+    @Reference(version = "boot-1.0.0", timeout = 50000)
     private UserService userService;
 
     /**
