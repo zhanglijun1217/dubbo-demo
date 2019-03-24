@@ -13,7 +13,7 @@
     <dubbo:registry address="zookeeper://127.0.0.1:2181"  check="false"/>
 
     <!-- 引用远程接口 -->
-    <dubbo:reference id="userService" interface="service.user.UserService" check="false"/>
+    <dubbo:reference id="userService" interface="service.user.UserService" check="false" timeout="3000"/>
 
     <!-- 启动包扫描 -->
     <context:component-scan base-package="service.impl" />

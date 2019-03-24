@@ -1,6 +1,7 @@
 package service.impl;
 
 import javabean.UserAddress;
+import lombok.SneakyThrows;
 import service.user.UserService;
 
 import java.util.ArrayList;
@@ -12,8 +13,11 @@ import java.util.List;
  */
 public class UserServiceImpl implements UserService {
 
+    @SneakyThrows
     @Override
     public List<UserAddress> getUserAddressList(String userId) {
+
+        Thread.sleep(1000);
 
         System.out.println("调用到了消费者");
         final UserAddress userAddress1 = new UserAddress()
@@ -36,3 +40,5 @@ public class UserServiceImpl implements UserService {
         }};
     }
 }
+
+
