@@ -14,11 +14,11 @@ public class TestConsumer {
 
         // 启动spring环境
         applicationContext.start();
-
+//
         // 拿到orderService这个bean
         OrderService bean = applicationContext.getBean(OrderService.class);
 
-        // 调用 测试是否调用了远程接口
+        // 测试是否调用了远程接口
         bean.initOrder();
 
         System.in.read();
