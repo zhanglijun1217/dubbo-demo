@@ -6,16 +6,18 @@ import service.user.UserService;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author 夸克
  * @date 2019/3/18 00:15
  */
 public class UserServiceImpl implements UserService {
-
     @SneakyThrows
     @Override
     public List<UserAddress> getUserAddressList(String userId) {
+
+        System.out.println("调用到了服务。。。。。1");
 
         Thread.sleep(1000);
 
