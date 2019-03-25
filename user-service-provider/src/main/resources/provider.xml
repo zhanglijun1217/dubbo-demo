@@ -16,8 +16,15 @@
     <!-- 使用dubbo协议在20880端口暴露服务 -->
     <dubbo:protocol name="dubbo" port="20880" />
 
-    <!-- 生命要暴露的服务接口 -->
-    <dubbo:service interface="service.user.UserService" ref="userService" />
+    <!-- 申明要暴露的服务接口 -->
+    <!-- timeout属性 dubbo service标签是默认1000ms  引用方reference标签是继承consumer的默认值也是1000ms
+    有两个默认的覆盖策略
+         （1）精确优先
+         （2）精确级别相同时，消费者优先-->
+    <dubbo:service interface="service.user.UserService" ref="userService" timeout="1000">
+        <!--引用方法级别 timeout会优先生效-->
+        <!--<dubbo:method name="getUserAddressList" timeout="500"/>-->
+    </dubbo:service>
 
     <!-- 实现服务 -->
     <bean id="userService" class="service.impl.UserServiceImpl" />
