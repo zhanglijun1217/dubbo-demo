@@ -13,7 +13,7 @@
     <dubbo:registry address="zookeeper://127.0.0.1:2181"  check="false"/>
 
     <!-- 引用远程接口  version属性引用对应的版本：version如果配置了* 那么是随机引用对应的版本-->
-    <dubbo:reference id="userService" interface="service.user.UserService" check="false" version="*"/>
+    <dubbo:reference id="userService" interface="service.user.UserService" check="false" version="0.0.1"/>
 
     <!-- 启动包扫描 -->
     <context:component-scan base-package="service.impl" />
