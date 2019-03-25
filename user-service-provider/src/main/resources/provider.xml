@@ -28,12 +28,17 @@
          （1）精确优先
          （2）精确级别相同时，消费者优先-->
     <!-- retries属性 该属性的次数设置不包含第一次调用 -->
-    <dubbo:service interface="service.user.UserService" ref="userService" timeout="1000" retries="3">
+    <dubbo:service interface="service.user.UserService" ref="userService" timeout="2000" retries="3" version="0.0.1">
         <!--引用方法级别 timeout会优先生效-->
         <!--<dubbo:method name="getUserAddressList" timeout="500"/>-->
     </dubbo:service>
 
-    <!-- 实现服务 -->
+    <!--服务实现的新的版本-->
+    <dubbo:service interface="service.user.UserService" ref = "userServiceNew" version="0.0.2" />
+
+    <!-- 实现服务 (旧) -->
     <bean id="userService" class="service.impl.UserServiceImpl" />
+    <!--实现服务（新）-->
+    <bean id="userServiceNew" class="service.impl.UserServiceNewImpl" />
 
 </beans>

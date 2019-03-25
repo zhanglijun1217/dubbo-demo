@@ -6,19 +6,17 @@ import service.user.UserService;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author 夸克
  * @date 2019/3/18 00:15
  */
-public class UserServiceImpl implements UserService {
+public class UserServiceNewImpl implements UserService {
     @SneakyThrows
     @Override
     public List<UserAddress> getUserAddressList(String userId) {
 
-        System.out.println("调用到了旧版本服务。。。。。1");
-
+        System.out.println("调用到了新版本的服务。。。。");
 
         final UserAddress userAddress1 = new UserAddress()
                 .setUserId(1L)
