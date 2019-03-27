@@ -12,5 +12,5 @@ import java.util.List;
  */
 public interface OrderService {
 
-    List<UserAddress> initOrder();
+    List<UserAddress> initOrder(String userId);
 }

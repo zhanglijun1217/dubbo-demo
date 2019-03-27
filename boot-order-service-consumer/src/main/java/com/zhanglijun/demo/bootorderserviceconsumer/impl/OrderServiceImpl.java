@@ -17,7 +17,7 @@ import java.util.Optional;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Reference(version = "boot-1.0.0", timeout = 50000)
+    @Reference( timeout = 50000)
     private UserService userService;
 
     /**
@@ -27,8 +27,8 @@ public class OrderServiceImpl implements OrderService {
      * @return
      */
     @Override
-    public List<UserAddress> initOrder() {
-        List<UserAddress> userAddressList = userService.getUserAddressList("1");
+    public List<UserAddress> initOrder(String userId) {
+        List<UserAddress> userAddressList = userService.getUserAddressList(userId);
         if (null != userAddressList && userAddressList.size() > 0) {
             System.out.println("调用远程接口完成");
 

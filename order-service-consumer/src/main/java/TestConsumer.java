@@ -19,7 +19,7 @@ public class TestConsumer {
         OrderService bean = applicationContext.getBean(OrderService.class);
 
         // 测试是否调用了远程接口
-        bean.initOrder();
+        bean.initOrder("1234");
 
         System.in.read();
     }

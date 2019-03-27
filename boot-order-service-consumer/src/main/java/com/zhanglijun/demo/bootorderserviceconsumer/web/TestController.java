@@ -20,7 +20,7 @@ public class TestController {
     private OrderService orderService;
 
     @GetMapping(path = "/initOrder")
-    public List<UserAddress> initOrder(@RequestParam("userId") Integer userId) {
-        return orderService.initOrder();
+    public List<UserAddress> initOrder(@RequestParam("userId") String userId) {
+        return orderService.initOrder(userId);
     }
 }

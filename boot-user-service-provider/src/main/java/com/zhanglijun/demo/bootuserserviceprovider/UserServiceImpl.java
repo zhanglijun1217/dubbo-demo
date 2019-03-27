@@ -12,8 +12,10 @@ import java.util.List;
  * @author 夸克
  * @date 2019/3/18 00:15
  */
+//@Service(version = "boot-1.0.0") /** 这里使用xml的配置 服务提供者 */
+
 @Component
-@Service(version = "boot-1.0.0")
+@Service// 这个是为了 配合第三种spring boot dubbo整合方式  利于dubboComponentScan扫描到这个dubbo服务
 public class UserServiceImpl implements UserService {
 
     @Override
