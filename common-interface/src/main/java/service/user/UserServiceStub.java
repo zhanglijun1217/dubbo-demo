@@ -12,14 +12,14 @@ import java.util.List;
  * @author 夸克
  * @date 2019/3/26 00:20
  */
-public class UserServiceSub implements UserService {
+public class UserServiceStub implements UserService {
 
     /**
      * userService的一个定义 必须有一个有参数构造函数，承接proxy对象
      */
     private final   UserService userService;
 
-    public UserServiceSub(UserService userService) {
+    public UserServiceStub(UserService userService) {
         super();
         this.userService = userService;
     }

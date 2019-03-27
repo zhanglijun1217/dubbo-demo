@@ -3,6 +3,7 @@ package com.zhanglijun.demo.bootuserserviceprovider.config;
 import com.alibaba.dubbo.config.*;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Primary;
 import service.user.UserService;
 
 import java.util.ArrayList;
@@ -64,11 +65,14 @@ public class DubboProviderConfig {
      * @return
      */
     @Bean
+    @Primary
     public ServiceConfig<UserService> serviceServiceConfig(UserService userService) {
         ServiceConfig<UserService> serviceServiceConfig = new ServiceConfig<>();
         serviceServiceConfig.setInterface(UserService.class);
         serviceServiceConfig.setRef(userService);
-        serviceServiceConfig.setVersion("boot-1.0.0"); // 这种设置版本是无效的？
+
+        // fixme 这种设置 版本、本地存根、重试次数 是无效的？
+        serviceServiceConfig.setVersion("boot-1.0.0");
         serviceServiceConfig.setStub("service.user.UserServiceSub");
         serviceServiceConfig.setRetries(3);
 

@@ -32,7 +32,7 @@
          （2）精确级别相同时，消费者优先-->
     <!-- retries属性 该属性的次数设置不包含第一次调用 -->
     <dubbo:service interface="service.user.UserService" ref="userService" timeout="2000" retries="3"
-                   version="boot-1.0.0" stub="service.user.UserServiceSub">
+                   version="boot-1.0.0" stub="service.user.UserServiceStub">
         <!--引用方法级别 timeout会优先生效-->
         <!--<dubbo:method name="getUserAddressList" timeout="500"/>-->
     </dubbo:service>
