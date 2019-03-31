@@ -17,7 +17,7 @@ public class UserServiceImpl implements UserService {
     @Override
     public List<UserAddress> getUserAddressList(String userId) {
 
-        System.out.println("调用到了旧版本服务。。。。。1");
+        System.out.println("调用到了服务。。。。。1");
 
 
         final UserAddress userAddress1 = new UserAddress()

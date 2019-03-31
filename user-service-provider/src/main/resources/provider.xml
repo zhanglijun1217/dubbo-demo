@@ -14,13 +14,13 @@
     <dubbo:registry address="zookeeper://127.0.0.1:2181" />
 
     <!-- 使用dubbo协议在20880端口暴露服务 -->
-<!--
     <dubbo:protocol name="dubbo" port="20880" />
--->
 <!--
 <dubbo:protocol name="dubbo" port="20881" />
 -->
+<!--
 <dubbo:protocol name="dubbo" port="20882" />
+-->
 
     <!-- 申明要暴露的服务接口 -->
     <!-- timeout属性 dubbo service标签是默认1000ms  引用方reference标签是继承consumer的默认值也是1000ms
@@ -35,7 +35,9 @@
     </dubbo:service>
 
     <!--服务实现的新的版本-->
+<!--
     <dubbo:service interface="service.user.UserService" ref = "userServiceNew" version="0.0.2" />
+-->
 
     <!-- 实现服务 (旧) -->
     <bean id="userService" class="service.impl.UserServiceImpl" />

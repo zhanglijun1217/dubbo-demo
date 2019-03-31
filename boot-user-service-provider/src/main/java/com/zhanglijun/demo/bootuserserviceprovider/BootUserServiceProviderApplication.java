@@ -20,17 +20,17 @@ import org.springframework.context.annotation.ImportResource;
  * 第一种整合方式
  */
 @SpringBootApplication
-//@EnableDubbo
+@EnableDubbo
 
 /**
  * 第二种整合方式
  */
-//@ImportResource(value = {"classpath:provider.xml"}) // 引入dubbo的配置文件 这里是第二种配置方式
+@ImportResource(value = {"classpath:provider.xml"}) // 引入dubbo的配置文件 这里是第二种配置方式
 
 /**
  * 第三种整合方式 扫描对应的config配置类 这里要将importResource注解注释掉
  */
-@EnableDubbo(scanBasePackages = {"com.zhanglijun.demo.bootuserserviceprovider"})
+//@EnableDubbo(scanBasePackages = {"com.zhanglijun.demo.bootuserserviceprovider"})
 
 public class BootUserServiceProviderApplication {
 
