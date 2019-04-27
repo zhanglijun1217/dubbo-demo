@@ -17,7 +17,7 @@ import java.util.Optional;
 @Service
 public class OrderServiceImpl implements OrderService {
 
-    @Reference(version = "0.0.1", loadbalance = "leastactive")
+    @Reference
     private UserService userService;
 
     /**
