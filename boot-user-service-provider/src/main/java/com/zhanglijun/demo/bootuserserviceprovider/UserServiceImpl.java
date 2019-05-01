@@ -2,6 +2,7 @@ package com.zhanglijun.demo.bootuserserviceprovider;
 
 import com.alibaba.dubbo.config.annotation.Service;
 import javabean.UserAddress;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import service.user.UserService;
 
@@ -16,12 +17,14 @@ import java.util.List;
 
 //@Component
 //@Service// 这个是为了 配合第三种spring boot dubbo整合方式  利于dubboComponentScan扫描到这个dubbo服务
+    @Slf4j
 public class UserServiceImpl implements UserService {
 
     @Override
     public List<UserAddress> getUserAddressList(String userId) {
 
         System.out.println(Thread.currentThread().getName() + " 调用到了消费者");
+        log.info("愤怒，windows为啥不显示表情");
         final UserAddress userAddress1 = new UserAddress()
                 .setUserId(1L)
                 .setAddressId(1L)
