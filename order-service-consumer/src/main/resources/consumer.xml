@@ -15,6 +15,8 @@
     <!-- 引用远程接口  version属性引用对应的版本：version如果配置了* 那么是随机引用对应的版本-->
     <dubbo:reference id="userService" interface="service.user.UserService" check="false" version="0.0.1"/>
 
+    <!--泛化调用的接口-->
+    <dubbo:reference id="iGenericDemoService" interface="generic.IGenericDemoService" generic="true" />
     <!-- 启动包扫描 -->
     <context:component-scan base-package="service.impl" />
 

@@ -44,4 +44,10 @@
     <!--实现服务（新）-->
     <bean id="userServiceNew" class="service.impl.UserServiceNewImpl" />
 
+
+    <!--测试泛化调用-->
+    <bean id="iGenericDemoService" class="generic.IGenericDemoServiceImpl" />
+    <dubbo:service interface="generic.IGenericDemoService" ref="iGenericDemoService" timeout="2000" retries="3"/>
+
+
 </beans>

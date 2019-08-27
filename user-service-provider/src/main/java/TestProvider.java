@@ -1,5 +1,7 @@
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.util.concurrent.CountDownLatch;
+
 /**
  * @author 夸克
  * @date 2019/3/18 14:16
@@ -13,6 +15,6 @@ public class TestProvider {
         applicationContext.start();
 
         // 使程序hang住  不退出
-        System.in.read();
+        new CountDownLatch(1).await();
     }
 }
