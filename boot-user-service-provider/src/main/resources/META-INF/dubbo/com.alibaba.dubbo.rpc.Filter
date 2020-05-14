@@ -1,0 +1,1 @@
+dubboLoggerFilter=com.zhanglijun.demo.bootuserserviceprovider.filter.HelloFilter
